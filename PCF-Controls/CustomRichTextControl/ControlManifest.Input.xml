@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control namespace="ReactQuillPCF" controlName="MyRichTextControl" version="1.0.0" display-name-key="ReactQuillPCF_DisplayName" description-key="ReactQuillPCF_Description" control-type="standard">
+  <properties>
+    <property name="richTextValue" display-name-key="RichTextValue_Display_Key" description-key="RichTextValue_Description_Key" of-type="Multiple" usage="bound" required="true" />
+  </properties>
+  <resources>
+    <!-- Essential: Quill's CSS -->
+    <css path="node_modules/react-quill/dist/quill.snow.css" order="1" />
+
+    <!-- Essential: React & ReactDOM -->
+    <platform-library path="node_modules/react/umd/react.development.js" usage="development" />
+    <platform-library path="node_modules/react/umd/react.production.min.js" usage="production" />
+    <platform-library path="node_modules/react-dom/umd/react-dom.development.js" usage="development" />
+    <platform-library path="node_modules/react-dom/umd/react-dom.production.min.js" usage="production" />
+
+    <!-- Essential: React-Quill itself -->
+    <platform-library path="node_modules/react-quill/dist/react-quill.min.js" usage="production" />
+    <platform-library path="node_modules/react-quill/dist/react-quill.js" usage="development" />
+
+    <!-- Your control's bundled code -->
+    <code path="index.js" order="100" include-file-in-output="true"/>
+  </resources>
+  <feature-usage>
+    <!-- Essential: Declare Web API usage for dynamic font loading -->
+    <uses-feature name="webapi" required="true" />
+  </feature-usage>
+</control>

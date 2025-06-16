@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "out"
+  },
+  "include": [
+    "CustomRichTextControl/src",       
+    "CustomRichTextControl/generated"  
+  ],
+   "exclude": [
+    "node_modules",
+    "out"
+  ]
+}
